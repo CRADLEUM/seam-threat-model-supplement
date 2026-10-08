@@ -1,0 +1,31 @@
+candidate,year,source_class,c1,c2,c3,c4,c5,outcome,excluded_at,note,corpus_id
+CVE-2025-49596 MCP Inspector,2025,VEN,Y,Y,Y,Y,Y,included,,,I01
+CVE-2025-54136 Cursor,2025,NVD,Y,Y,Y,Y,Y,included,,,I02
+CVE-2025-68143/4/5 mcp-server-git,2025,NVD,Y,Y,Y,Y,Y,included,,,I03
+CVE-2025-6514 mcp-remote,2025,NVD,Y,Y,Y,Y,Y,included,,,I04
+CVE-2025-8217 Amazon Q Developer VS Code extension,2025,NVD,Y,Y,Y,Y,Y,included,,,I05
+CVE-2026-4269 Bedrock AgentCore Starter Toolkit,2026,NVD,Y,Y,Y,Y,Y,included,,,I06
+Storm-0558 signing-key theft,2023,STD,Y,Y,Y,Y,Y,included,,,I07
+CVE-2025-55241 Entra Actor token,2025,PB,Y,Y,Y,Y,Y,included,,,I08
+CVE-2023-36019 Power Platform connector spoofing,2023,NVD,Y,Y,Y,Y,Y,included,,,I09
+Salesloft Drift / UNC6395,2025,VEN,Y,Y,Y,Y,Y,included,,,I10
+CircleCI session-token theft,2023,VEN,Y,Y,Y,Y,Y,included,,,I11
+Okta support breach,2023,VEN,Y,Y,Y,Y,Y,included,,,I12
+GitHub-Heroku-Travis OAuth token theft,2022,VEN,Y,Y,Y,Y,Y,included,,,I13
+ASCII Smuggling,2024,PB,Y,Y,Y,Y,Y,included,,,I14
+AgentFlayer,2025,VEN,Y,Y,Y,Y,Y,included,,,I15
+EchoLeak (CVE-2025-32711),2025,NVD,Y,Y,Y,Y,Y,included,,,I16
+ChatGPT Custom GPT SSRF,2025,PB,Y,Y,Y,Y,Y,included,,,I17
+OpenAI Codex token theft via branch names,2026,PB,Y,Y,Y,Y,Y,included,,,I18
+Gemini memory,2025,PB,Y,Y,Y,Y,Y,included,,,I19
+Notion AI 3.0,2026,PB,Y,Y,Y,Y,Y,included,,,I20
+Slack AI,2024,PR,Y,Y,Y,Y,Y,included,,,I21
+CVE-2026-22252 LibreChat MCP,2026,NVD,,,,,,excluded,search: same threat-behavior class,"Same MCP-CVE threat-behavior class as admitted CVEs, which have stronger primary attribution",
+CVE-2026-22688 WeKnora,2026,NVD,,,,,,excluded,search: same threat-behavior class,"Same MCP-CVE threat-behavior class as admitted CVEs, which have stronger primary attribution",
+CVE-2025-54994 @akoskm/create-mcp-server-stdio,2025,NVD,,,,,,excluded,search: same threat-behavior class,"Same MCP-CVE threat-behavior class as admitted CVEs, which have stronger primary attribution",
+AWS Bedrock multi-agent prompt-injection research (Palo Alto Unit 42),2025,VEN,,,,,,excluded,search: source quality,Vendor research blog without a CVE or primary advisory,
+Slack July 2024 credential-stuffing infrastructure breach,2024,VEN,,,,,,excluded,search: topical fit,Not a bidirectional-integration drift event,
+Confluence CVE-2024-21683 / CVE-2024-4367 / CVE-2023-22527,2023-2024,NVD,,,,,,excluded,search: topical fit,"Platform-direct RCEs, not bidirectional-integration drift or write-back",
+GhostWrite (T-Head RISC-V CPU bug),2024,,,,,,,excluded,search: topical fit,"CPU vulnerability, unrelated; surfaced through a naming collision",
+OX Security / Anthropic MCP design-vulnerability disclosure,2026,VEN,,,,,,excluded,search: unresolved dispute,Anthropic disputes the design-vulnerability framing; unresolved at assembly; cited as background only,
+ChatGPT plugin OAuth flaws (Salt Labs),2024,VEN,,,,,,excluded,author decision,Excluded to keep the seven-incident antecedent set and reference list stable; not a C1-C5 failure,

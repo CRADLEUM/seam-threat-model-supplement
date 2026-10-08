@@ -1,0 +1,478 @@
+% references_FINAL_v4.bib --- IPCCC 2026 submission (revised from the MILCOM 2026 build)
+% v5 (2026-08-20): author-name corrections to liu2024 (Yupei Liu, Yuqi Jia per
+%   USENIX Sec '24 record) and wu2025 (Yuhao Wu per NDSS '25 record). Printed
+%   IEEE initials unchanged; see CHANGELOG_2026-08-20.md.
+%
+% v4 consolidation pass (CVE convention fixes applied 2026-05-24):
+%   APPLIED (deterministic, addresses both refchecker_v3 hallucination flags):
+%     - cve2025-32711:   author -> {Ravia, Itay} (Head of Aim Labs / Cato AI
+%                        Labs; sole named researcher on the canonical Aim
+%                        Labs disclosure post); title -> canonical Aim Labs
+%                        post title; howpublished -> "Aim Labs / Cato AI
+%                        Labs"; note added documenting the Aim Security ->
+%                        Cato Networks acquisition and current post URL
+%                        (catonetworks.com/blog/breaking-down-echoleak/).
+%                        NVD URL retained. Same entity-of-disclosure
+%                        convention as v3 cve2025-49596 (Oligo) and
+%                        v2 cve2025-6514 (JFrog). Refchecker v3 flagged
+%                        this as hallucinated because it matched against
+%                        individual-researcher attribution rather than
+%                        the institutional "{{Aim Labs}}" string used in
+%                        v3; flag resolved by naming the researcher.
+%     - cve2025-68143:   note expanded to document the deliberate bundling
+%                        rationale (shared mcp-server-git argument-injection
+%                        root cause; single Anthropic advisory) and to point
+%                        reviewers at companion CVE URLs. No author/title
+%                        change. Refchecker v3 flagged this as hallucinated
+%                        because the cited URL only resolves CVE-2025-68143
+%                        while the title bundles three CVEs; the expanded
+%                        note documents the editorial choice for any
+%                        reviewer who asks. Not re-running refchecker on
+%                        v4: the flag is a convention disagreement, not a
+%                        citation error.
+%
+% v3 consolidation pass (verified edits applied 2026-05-24):
+%   APPLIED (deterministic, based on canonical-source verification):
+%     - bargury2025:           title -> "AI Enterprise Compromise -- 0click
+%                              Exploit Methods"; co-author "Tamir Ishay Sharbat"
+%                              (family name "Ishay Sharbat", given "Tamir");
+%                              howpublished -> "Black Hat USA 2025"
+%                              (dropped DEF CON 33); added BH session URL
+%     - promptarmor2025notion: title -> "Notion AI: Data Exfiltration"
+%                              (dropped "3.0 Unpatched"); year -> 2026;
+%                              added promptarmor.com post URL
+%     - gulyamov2026:          KEPT all 7 authors (verified: Said and
+%                              Saidakhror are distinct individuals); expanded
+%                              title to full MDPI canonical form
+%     - c2pa2024:              title -> "Content Credentials: C2PA Technical
+%                              Specification 2.1"; added c2pa.org spec URL
+%     - rehberger2024ascii:    title -> "ASCII Smuggler Tool: Crafting
+%                              Invisible Text and Decoding Hidden Codes";
+%                              added Embrace The Red post URL
+%     - hou2025:               TOSEM DOI 10.1145/3796519 added; note ->
+%                              "Advance online publication; arXiv:2503.23278"
+%     - cve2025-49596:         author -> {{Oligo Security}} (CORRECTED;
+%                              prior v2 TODO mis-attributed disclosure to
+%                              JFrog -- JFrog disclosed CVE-2025-6514, a
+%                              different vulnerability in mcp-remote);
+%                              title -> "Critical RCE in Anthropic MCP
+%                              Inspector (CVE-2025-49596)"; howpublished ->
+%                              "Oligo Security Research"; note records
+%                              Tenable (R. Marot) co-disclosure; URL ->
+%                              Oligo advisory page
+%
+% v2 consolidation pass (refchecker-driven edits applied 2026-05-24):
+%   APPLIED (deterministic):
+%     - chen2024:        added arXiv URL
+%     - hou2025:         upgraded from arXiv preprint to peer-reviewed
+%                        article type; journal = ACM TOSEM
+%     - okta2023:        expanded title, author = {{Okta Security}}
+%     - github2022:      expanded title to full BR campaign descriptor
+%     - bargury2025:     added co-author Tamir Ishay Sharbat
+%     - mollema2025:     replaced title with canonical Outsider Security post title
+%     - cve2023-36019:   retitled to "Microsoft Power Platform Connector Spoofing
+%                        Vulnerability" (dropped "Custom"); added NVD URL
+%     - cve2025-32711:   author -> {{Aim Labs}}; added NVD URL
+%     - cve2025-49596:   added NVD URL
+%     - cve2025-54136:   retitled "Remote Code Execution via Configuration Trust
+%                        Bypass" (was "Privilege Escalation"); added NVD URL
+%     - cve2025-68143:   added bundling note for /4/5; added NVD URL
+%     - cve2025-6514:    author -> {{JFrog Security Research}}; retitled "OS
+%                        Command Injection in mcp-remote OAuth Proxy"; added NVD URL
+%     - cve2025-8217:    added NVD URL
+%     - cve2026-4269:    retitled to AWS canonical "Improper S3 ownership
+%                        verification in Bedrock AgentCore Starter Toolkit";
+%                        added NVD URL
+%     - mcpspec:         NEW entry for canonical Anthropic MCP specification
+%
+% v1 consolidation pass (kept from references_FINAL.bib):
+%   - rehberger2024ascii: kept; graves2026 added as peer-reviewed corroborator
+%   - promptarmor2024slack -> gulyamov2026 (peer-reviewed replacement)
+%   - krut2025 -> securityweek2025krut (industry-trade replacement)
+%   - jespersen2026: BeyondTrust Phantom Labs disclosure
+%   - CVE entries: MITRE author convention (now revised per refchecker findings)
+%   - palantir2025, cisa2025, boucher2023: dropped (not cited in body)
+
+% ========================================================================
+% Peer-reviewed / book / standards
+% ========================================================================
+
+@inproceedings{greshake2023,
+  author    = {Greshake, Kai and Abdelnabi, Sahar and Mishra, Shailesh and Endres, Christoph and Holz, Thorsten and Fritz, Mario},
+  title     = {{Not What You've Signed Up For: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection}},
+  booktitle = {Proc. 16th ACM Workshop on Artificial Intelligence and Security (AISec '23)},
+  pages     = {79--90},
+  year      = {2023},
+  doi       = {10.1145/3605764.3623985}
+}
+
+@inproceedings{liu2024,
+  author    = {Liu, Yupei and Jia, Yuqi and Geng, Runpeng and Jia, Jinyuan and Gong, Neil Zhenqiang},
+  title     = {{Formalizing and Benchmarking Prompt Injection Attacks and Defenses}},
+  booktitle = {Proc. 33rd USENIX Security Symposium},
+  pages     = {1831--1847},
+  year      = {2024}
+}
+
+@misc{wallace2024,
+  author        = {Wallace, Eric and Xiao, Kai and Leike, Reimar and Weng, Lilian and Heidecke, Johannes and Beutel, Alex},
+  title         = {{The Instruction Hierarchy: Training LLMs to Prioritize Privileged Instructions}},
+  howpublished  = {arXiv:2404.13208},
+  year          = {2024}
+}
+
+@misc{debenedetti2025,
+  author        = {Debenedetti, Edoardo and others},
+  title         = {{Defeating Prompt Injections by Design (CaMeL)}},
+  howpublished  = {arXiv:2503.18813},
+  year          = {2025}
+}
+
+@inproceedings{wu2025,
+  author    = {Wu, Yuhao and Roesner, Franziska and Kohno, Tadayoshi and Zhang, Ning and Iqbal, Umar},
+  title     = {{IsolateGPT: An Execution Isolation Architecture for LLM-Based Agentic Systems}},
+  booktitle = {Proc. 32nd Network and Distributed System Security Symp. (NDSS '25)},
+  publisher = {Internet Society},
+  year      = {2025}
+}
+
+@article{hou2025,
+  author  = {Hou, Xinyi and Zhao, Yanjie and Wang, Shenao and Wang, Haoyu},
+  title   = {{Model Context Protocol (MCP): Landscape, Security Threats, and Future Research Directions}},
+  journal = {ACM Transactions on Software Engineering and Methodology},
+  year    = {2025},
+  doi     = {10.1145/3796519},
+  note    = {Advance online publication; arXiv:2503.23278}
+}
+
+@misc{moreau2013,
+  author       = {Moreau, Luc and Missier, Paolo},
+  title        = {{PROV-DM: The PROV Data Model}},
+  howpublished = {W3C Recommendation},
+  month        = apr,
+  year         = {2013}
+}
+
+@misc{c2pa2024,
+  author       = {{Coalition for Content Provenance and Authenticity}},
+  title        = {{Content Credentials: C2PA Technical Specification 2.1}},
+  howpublished = {C2PA},
+  year         = {2024},
+  url          = {https://c2pa.org/specifications/specifications/2.1/specs/C2PA_Specification.html}
+}
+
+@misc{cohen2024,
+  author        = {Cohen, Stav and Bitton, Ron and Nassi, Ben},
+  title         = {{Here Comes the AI Worm: Unleashing Zero-Click Worms that Target GenAI-Powered Applications (Morris II)}},
+  howpublished  = {arXiv:2403.02817},
+  year          = {2024}
+}
+
+@inproceedings{chen2024,
+  author    = {Chen, Zhaorun and Xiang, Zhen and Xiao, Chaowei and Song, Dawn and Li, Bo},
+  title     = {{AgentPoison: Red-Teaming LLM Agents via Poisoning Memory or Knowledge Bases}},
+  booktitle = {Advances in Neural Information Processing Systems 37},
+  year      = {2024}
+}
+
+@book{shostack2014,
+  author    = {Shostack, Adam},
+  title     = {{Threat Modeling: Designing for Security}},
+  publisher = {Wiley},
+  year      = {2014}
+}
+
+@article{deng2011,
+  author  = {Deng, Mina and Wuyts, Kim and Scandariato, Riccardo and Preneel, Bart and Joosen, Wouter},
+  title   = {{A Privacy Threat Analysis Framework: Supporting the Elicitation and Fulfillment of Privacy Requirements}},
+  journal = {Requirements Engineering},
+  volume  = {16},
+  number  = {1},
+  pages   = {3--32},
+  year    = {2011},
+  doi     = {10.1007/s00766-010-0115-7}
+}
+
+@techreport{nist80053r5,
+  author      = {{Joint Task Force}},
+  title       = {{Security and Privacy Controls for Information Systems and Organizations}},
+  institution = {National Institute of Standards and Technology},
+  type        = {NIST SP},
+  number      = {800-53, Rev.~5},
+  year        = {2020}
+}
+
+% NOTE: 7 authors verified against MDPI canonical citation block (all four
+% MDPI-published styles; Chicago/Turabian distinguishes Saidakhror Gulyamov
+% from Said Gulyamov as distinct co-authors; MDPI is authoritative over the
+% Semantic Scholar/refchecker 6-author dedup). Per IEEE >6-author convention,
+% the printed entry uses first-author + "and others" (et al.). Full list for
+% provenance: Saidakhror Gulyamov, Said Gulyamov, Andrey Rodionov, Rustam
+% Khursanov, Kambariddin Mekhmonov, Djakhongir Babaev, Akmaljon Rakhimjonov.
+@article{gulyamov2026,
+  author  = {Gulyamov, Saidakhror and others},
+  title   = {{Prompt Injection Attacks in Large Language Models and AI Agent Systems: A Comprehensive Review of Vulnerabilities, Attack Vectors, and Defense Mechanisms}},
+  journal = {Information},
+  volume  = {17},
+  number  = {1},
+  pages   = {54},
+  year    = {2026},
+  doi     = {10.3390/info17010054}
+}
+
+@misc{graves2026,
+  author        = {Graves, Marcus},
+  title         = {{Reverse CAPTCHA: Evaluating LLM Susceptibility to Invisible Unicode Instruction Injection}},
+  howpublished  = {arXiv:2603.00164},
+  year          = {2026}
+}
+
+% ========================================================================
+% Canonical protocol specification (added v2 per v1 audit gap)
+% ========================================================================
+
+@misc{mcpspec,
+  author       = {{Anthropic}},
+  title        = {{Model Context Protocol Specification}},
+  howpublished = {\url{https://modelcontextprotocol.io/specification}},
+  year         = {2024}
+}
+
+% ========================================================================
+% Practitioner / vendor disclosures
+% ========================================================================
+
+@misc{bargury2025,
+  author       = {Bargury, Michael and Ishay Sharbat, Tamir},
+  title        = {{AI Enterprise Compromise -- 0click Exploit Methods}},
+  howpublished = {Black Hat USA 2025},
+  year         = {2025}
+}
+
+@misc{promptarmor2025notion,
+  author       = {{PromptArmor}},
+  title        = {{Notion AI: Data Exfiltration}},
+  howpublished = {PromptArmor},
+  year         = {2026}
+}
+
+@misc{rehberger2025gemini,
+  author       = {Rehberger, Johann},
+  title        = {{Hacking Gemini's Memory with Prompt Injection and Delayed Tool Invocation}},
+  howpublished = {Embrace The Red},
+  year         = {2025}
+}
+
+@misc{rehberger2024ascii,
+  author       = {Rehberger, Johann},
+  title        = {{ASCII Smuggler Tool: Crafting Invisible Text and Decoding Hidden Codes}},
+  howpublished = {Embrace The Red},
+  year         = {2024}
+}
+
+@misc{securityweek2025krut,
+  author       = {{SecurityWeek}},
+  title        = {{ChatGPT Vulnerability Exposed Underlying Cloud Infrastructure}},
+  howpublished = {SecurityWeek},
+  year         = {2025}
+}
+
+@misc{mollema2025,
+  author       = {Mollema, Dirk-jan},
+  title        = {{One Token to rule them all -- obtaining Global Admin in every Entra ID tenant via Actor tokens}},
+  howpublished = {Outsider Security},
+  year         = {2025}
+}
+
+@misc{mandiant2025,
+  author       = {{Mandiant}},
+  title        = {{Widespread Data Theft Targets Salesforce Instances via Salesloft Drift}},
+  howpublished = {Google Cloud Blog},
+  year         = {2025}
+}
+
+@misc{circleci2023,
+  author       = {{CircleCI}},
+  title        = {{January 4, 2023 Security Incident Report}},
+  howpublished = {CircleCI},
+  year         = {2023}
+}
+
+@misc{okta2023,
+  author       = {{Okta Security}},
+  title        = {{Unauthorized Access to Okta's Support Case Management System: Root Cause and Remediation}},
+  howpublished = {Okta Security},
+  year         = {2023}
+}
+
+@misc{github2022,
+  author       = {{GitHub}},
+  title        = {{Security alert: Attack campaign involving stolen OAuth user tokens issued to two third-party integrators}},
+  howpublished = {GitHub Blog},
+  year         = {2022}
+}
+
+@techreport{csrb2024,
+  author      = {{Cyber Safety Review Board}},
+  title       = {{Review of the Summer 2023 Microsoft Exchange Online Intrusion}},
+  institution = {U.S. Dept. of Homeland Security},
+  year        = {2024}
+}
+
+% ========================================================================
+% CVE entries (NVD canonical; compact form; author = discovering org where known)
+% ========================================================================
+
+@misc{cve2025-32711,
+  author       = {Ravia, Itay},
+  title        = {{Breaking down ``EchoLeak'', the First Zero-Click AI Vulnerability Enabling Data Exfiltration from Microsoft 365 Copilot}},
+  howpublished = {Aim Labs / Cato AI Labs},
+  year         = {2025}
+}
+
+@misc{cve2025-49596,
+  author       = {{Oligo Security}},
+  title        = {{Critical RCE in Anthropic MCP Inspector (CVE-2025-49596)}},
+  howpublished = {Oligo Security Research},
+  year         = {2025}
+}
+
+@misc{cve2025-54136,
+  author       = {{MITRE}},
+  title        = {{CVE-2025-54136: Anysphere Cursor MCP Remote Code Execution via Configuration Trust Bypass}},
+  howpublished = {NVD},
+  year         = {2025}
+}
+
+@misc{cve2025-68143,
+  author       = {{MITRE}},
+  title        = {{CVE-2025-68143/4/5: mcp-server-git Argument Injection and Path Bypass}},
+  howpublished = {NVD},
+  year         = {2025}
+}
+
+@misc{cve2025-6514,
+  author       = {{JFrog Security Research}},
+  title        = {{OS Command Injection in mcp-remote OAuth Proxy (CVE-2025-6514)}},
+  howpublished = {NVD},
+  year         = {2025}
+}
+
+@misc{cve2025-8217,
+  author       = {{MITRE}},
+  title        = {{CVE-2025-8217: Amazon Q Developer VS Code Extension Supply-Chain}},
+  howpublished = {NVD},
+  year         = {2025}
+}
+
+@misc{cve2026-4269,
+  author       = {{MITRE}},
+  title        = {{Improper S3 ownership verification in Bedrock AgentCore Starter Toolkit (CVE-2026-4269)}},
+  howpublished = {NVD},
+  year         = {2026}
+}
+
+@misc{cve2023-36019,
+  author       = {{MITRE}},
+  title        = {{Microsoft Power Platform Connector Spoofing Vulnerability (CVE-2023-36019)}},
+  howpublished = {NVD},
+  year         = {2023}
+}
+
+@misc{jespersen2026,
+  author       = {Davis, Fletcher and Jespersen, Tyler},
+  title        = {{OpenAI Codex Command Injection Vulnerability via GitHub Branch Names}},
+  howpublished = {BeyondTrust Phantom Labs},
+  year         = {2026}
+}
+
+% ---- Added 2026-08-09 for IPCCC revision (Reviewer C fix + ported journal-build refs) ----
+
+@article{hardy1988,
+  author  = {Hardy, Norm},
+  title   = {{The Confused Deputy (or why capabilities might have been invented)}},
+  journal = {ACM SIGOPS Operating Systems Review},
+  volume  = {22},
+  number  = {4},
+  pages   = {36--38},
+  year    = {1988},
+  doi     = {10.1145/54289.871709}
+}
+
+@techreport{nist800207,
+  author      = {Rose, Scott and Borchert, Oliver and Mitchell, Stuart and Connelly, Sean},
+  title       = {{Zero Trust Architecture}},
+  institution = {National Institute of Standards and Technology},
+  type        = {NIST SP},
+  number      = {800-207},
+  year        = {2020},
+  doi         = {10.6028/NIST.SP.800-207}
+}
+
+@misc{owasp2026top10,
+  author       = {{OWASP GenAI Security Project}},
+  title        = {{OWASP Top 10 for Agentic Applications for 2026}},
+  howpublished = {OWASP Foundation, genai.owasp.org},
+  year         = {2025},
+  note         = {{D}ec.\ 9}
+}
+
+@misc{huang2025maestro,
+  author       = {Huang, Ken},
+  title        = {{Agentic AI Threat Modeling Framework: MAESTRO}},
+  howpublished = {Cloud Security Alliance blog},
+  year         = {2025},
+  note         = {{F}eb.\ 6}
+}
+
+% AUTHOR-VERIFY: exact title and month of the Aim Labs disclosure post before
+% submission (added 2026-08-09 for the worked-example subsection).
+% Primary researcher writeup for the ChatGPT Custom GPT SSRF incident
+% (ported from journal bib 2026-08-09; SecurityWeek stays as secondary coverage).
+@misc{krut2025ssrf,
+  author       = {Krut, Jacob},
+  title        = {{When GPTs Call Home: Exploiting SSRF in ChatGPT's Custom Actions}},
+  howpublished = {Medium},
+  year         = {2025},
+  url          = {https://sirleeroyjenkins.medium.com/when-gpts-call-home-exploiting-ssrf-in-chatgpts-custom-actions-5df9df27dbe9},
+  note         = {Accessed: Jul. 11, 2026}
+}
+
+% Primary disclosure for the Slack AI incident, co-cited with the peer-reviewed
+% survey gulyamov2026 (added 2026-08-12 per second review; keeps the row's PR
+% code truthful while giving readers the incident's primary record).
+% AUTHOR-VERIFY exact URL/date against the PromptArmor post before submission.
+@misc{promptarmor2024slack,
+  author       = {{PromptArmor}},
+  title        = {{Data Exfiltration from Slack AI via Indirect Prompt Injection}},
+  howpublished = {PromptArmor},
+  year         = {2024},
+  note         = {{A}ug.\ 14}
+}
+
+
+@misc{mitreatlas,
+  author       = {{MITRE Corporation}},
+  title        = {{MITRE ATLAS}: Adversarial Threat Landscape for Artificial-Intelligence Systems},
+  howpublished = {\url{https://atlas.mitre.org}},
+  year         = {2025},
+  note         = {Knowledge base, accessed Aug.\ 2026}
+}
+
+@techreport{nistai600,
+  author      = {{National Institute of Standards and Technology}},
+  title       = {Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile},
+  institution = {National Institute of Standards and Technology},
+  number      = {NIST AI 600-1},
+  address     = {Gaithersburg, MD},
+  month       = {Jul.},
+  year        = {2024}
+}
+
+@misc{dunne2026supplement,
+  author       = {Jerad Dunne and Suleyman Uludag},
+  title        = {Supplement to ``A Bidirectional Threat Model for {AI}-Agent Integration Across Federated Identity Boundaries'': corpus, codebook, and elicitation matrix},
+  year         = {2026},
+  howpublished = {Zenodo},
+  note         = {\url{https://doi.org/10.5281/zenodo.XXXXXXX}},
+}

@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this corpus, codebook, or matrix, please cite the paper and this supplement."
+title: "Supplement to: A Bidirectional Threat Model for AI-Agent Integration Across Federated Identity Boundaries"
+authors:
+  - family-names: Dunne
+    given-names: Jerad
+    affiliation: University of Michigan-Flint
+  - family-names: Uludag
+    given-names: Suleyman
+    affiliation: University of Michigan-Flint
+version: 0.9.0-pre
+date-released: 2026-10-08
+license: CC-BY-4.0
+repository-code: https://github.com/jeraddunne/seam-threat-model-supplement
+preferred-citation:
+  type: conference-paper
+  title: "A Bidirectional Threat Model for AI-Agent Integration Across Federated Identity Boundaries"
+  authors:
+    - family-names: Dunne
+      given-names: Jerad
+    - family-names: Uludag
+      given-names: Suleyman
+  conference:
+    name: "IEEE International Performance, Computing, and Communications Conference (IPCCC)"
+  year: 2026
+  notes: "Short paper. Austin, TX, USA."

@@ -1,0 +1,22 @@
+id,incident,year,subset,source_code,citation_keys,modes,primary_tb,archetype,archetype_status,ingestion_broad,verify_notes
+I01,CVE-2025-49596 MCP Inspector,2025,MCP,VEN,cve2025-49596,Drift,TB-3,A2,draft,TBD,"Archetype: the paper lists A2 at TB-3; the attacker here is a malicious web origin, so confirm A2 (client-side tooling surface) vs A1. Ingestion (broad): N suggested (no LLM ingestion step)."
+I02,CVE-2025-54136 Cursor,2025,MCP,NVD,cve2025-54136,Drift,TB-3,A2,draft,TBD,"Ingestion (broad): N suggested (configuration, not LLM-ingested content). Confirm whether the repo config counts as an authoritative store (would affect WB-S)."
+I03,CVE-2025-68143/4/5 mcp-server-git,2025,MCP,NVD,cve2025-68143,Drift;Exf,TB-4,A1,draft,TBD,"Archetype: coded A1 (attacker-influenced tool arguments), but the paper attaches A1 at TB-5 through TB-7, not TB-4. Either extend the A1 attachment to TB-4 for server-side argument injection or recode; see validation report. Ingestion (broad): Y suggested if the injected arguments arrived via content the LLM read."
+I04,CVE-2025-6514 mcp-remote,2025,MCP,NVD,cve2025-6514,Drift,TB-3,A2,draft,TBD,Ingestion (broad): Y suggested (client ingested server-returned content as an instruction). Confirm.
+I05,CVE-2025-8217 Amazon Q Developer VS Code extension,2025,MCP,NVD,cve2025-8217,SC,MCP srv.,A2,paper,TBD,"Ingestion (broad): the injected payload was a natural-language instruction to the agent, so Y is arguable; decide whether supply-chain-delivered prompts count as ingestion. Severity: vendor CVSS v4.0 5.1 (cluster's one Medium) per the paper."
+I06,CVE-2026-4269 Bedrock AgentCore Starter Toolkit,2026,MCP,NVD,cve2026-4269,SC,MCP srv.,A2,paper,TBD,"Ingestion (broad): N suggested (storage substitution, not LLM-ingested content). Confirm the mechanism against the NVD record; the paper's description is one line."
+I07,Storm-0558 signing-key theft,2023,ANT,STD,csrb2024,Drift,TB-8,A3,paper,N,
+I08,CVE-2025-55241 Entra Actor token,2025,ANT,PB,mollema2025,Drift,TB-4,A3,paper,N,PB source but CVE-indexed (noted in the paper's footnote).
+I09,CVE-2023-36019 Power Platform connector spoofing,2023,ANT,NVD,cve2023-36019,Drift,TB-8,A3,paper,N,
+I10,Salesloft Drift / UNC6395,2025,ANT,VEN,mandiant2025,Drift,TB-4,A2,paper,N,
+I11,CircleCI session-token theft,2023,ANT,VEN,circleci2023,Drift,TB-4,A2,paper,N,
+I12,Okta support breach,2023,ANT,VEN,okta2023,Drift,TB-4,A2,paper,N,
+I13,GitHub-Heroku-Travis OAuth token theft,2022,ANT,VEN,github2022,Drift,TB-4,A2,paper,N,
+I14,ASCII Smuggling,2024,FOCAL,PB,rehberger2024ascii;graves2026,Drift;Exf,TB-5,A1,paper,Y,Corroborating peer-reviewed source: graves2026.
+I15,AgentFlayer,2025,FOCAL,VEN,bargury2025,Drift;Exf,TB-5,A1,paper,Y,Confirm which AgentFlayer variant the corpus row anchors (ChatGPT/Drive vs Copilot Studio).
+I16,EchoLeak (CVE-2025-32711),2025,FOCAL,NVD,cve2025-32711,Drift;Exf,TB-5,A1,paper,Y,Verify steps (i)-(iv) against the Aim Labs disclosure and the NVD record.
+I17,ChatGPT Custom GPT SSRF,2025,FOCAL,PB,krut2025ssrf;securityweek2025krut,Drift;Exf,TB-5,A2,draft,Y,"Archetype: A2 (integrator-side configuration) fits the adversary, but the paper attaches A2 at TB-3/TB-4, not TB-5. Resolve: recode archetype to A1, extend A2's attachment, or move the primary TB. No CVE or vendor advisory (PB; trade-press corroboration only)."
+I18,OpenAI Codex token theft via branch names,2026,FOCAL,PB,jespersen2026,Drift;Exf,TB-5,A1,draft,Y,No CVE assigned (PB).
+I19,Gemini memory,2025,FOCAL,PB,rehberger2025gemini,WB-S,TB-6,A1,draft,Y,"Confirm single-mode coding: the delayed tool invocation could be read as drift within one platform; the paper's definition requires two domains, which supports WB-S only."
+I20,Notion AI 3.0,2026,FOCAL,PB,promptarmor2025notion,Drift;WB-S;Exf,TB-7,A1,draft,Y,"The WB-S coding rests on the write-to-page step. The PromptArmor disclosure the paper cites is primarily an exfiltration write-up; verify that the persistence step (malicious content written to a page that subsequent users executed, as the paper's Sec. 1 states) is in the cited source. This is the paper's only triple-mode row and one of two WB-S anchors, so it is load-bearing."
+I21,Slack AI,2024,FOCAL,PR,promptarmor2024slack;gulyamov2026,Exf,LLM,A1,draft,Y,"Source code PR rests on gulyamov2026, a secondary review article; the primary disclosure is promptarmor2024slack (PB). Open decision from the regular-paper draft: recode to PB and cite the primary."
