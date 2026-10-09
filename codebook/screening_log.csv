@@ -18,8 +18,8 @@ EchoLeak (CVE-2025-32711),2025,NVD,Y,Y,Y,Y,Y,included,,,I16
 ChatGPT Custom GPT SSRF,2025,PB,Y,Y,Y,Y,Y,included,,,I17
 OpenAI Codex token theft via branch names,2026,PB,Y,Y,Y,Y,Y,included,,,I18
 Gemini memory,2025,PB,Y,Y,Y,Y,Y,included,,,I19
-Notion AI 3.0,2026,PB,Y,Y,Y,Y,Y,included,,,I20
-Slack AI,2024,PR,Y,Y,Y,Y,Y,included,,,I21
+Notion AI,2026,PB,Y,Y,Y,Y,Y,included,,,I20
+Slack AI,2024,PB,Y,Y,Y,Y,Y,included,,,I21
 CVE-2026-22252 LibreChat MCP,2026,NVD,,,,,,excluded,search: same threat-behavior class,"Same MCP-CVE threat-behavior class as admitted CVEs, which have stronger primary attribution",
 CVE-2026-22688 WeKnora,2026,NVD,,,,,,excluded,search: same threat-behavior class,"Same MCP-CVE threat-behavior class as admitted CVEs, which have stronger primary attribution",
 CVE-2025-54994 @akoskm/create-mcp-server-stdio,2025,NVD,,,,,,excluded,search: same threat-behavior class,"Same MCP-CVE threat-behavior class as admitted CVEs, which have stronger primary attribution",

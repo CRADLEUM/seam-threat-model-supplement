@@ -24,8 +24,8 @@ ARCHETYPE_TB = {  # codebook Sec. 5 (paper Sec. 3-A)
     "A2": {"TB-3", "TB-4", "MCP srv."},
     "A3": {"TB-1", "TB-4", "TB-8"},
 }
-ANCHORS_PB_FOCAL = {"ASCII Smuggling", "ChatGPT Custom GPT SSRF",
-                    "OpenAI Codex token theft via branch names", "Gemini memory", "Notion AI 3.0"}
+ANCHORS_PB_FOCAL = {"ASCII Smuggling", "ChatGPT Custom GPT SSRF", "Slack AI",
+                    "OpenAI Codex token theft via branch names", "Gemini memory", "Notion AI"}
 
 def main(write=False):
     rows = list(csv.DictReader(open(CORPUS, newline="")))
@@ -50,7 +50,7 @@ def main(write=False):
     exact = [i for i, m in modes.items() if m == {"Drift", "Exf"}]
     check("Six exact Drift+Exf pairings", len(exact) == 6, ", ".join(sorted(exact)))
     triple = [i for i, m in modes.items() if m == {"Drift", "WB-S", "Exf"}]
-    check("One triple-mode incident (Notion AI 3.0)", triple == ["I20"], ", ".join(triple))
+    check("One triple-mode incident (Notion AI)", triple == ["I20"], ", ".join(triple))
     wbs = [i for i, m in modes.items() if "WB-S" in m]
     check("WB-S appears in exactly two incidents", len(wbs) == 2, ", ".join(wbs))
     sc = [i for i, m in modes.items() if "SC" in m]
@@ -65,8 +65,8 @@ def main(write=False):
     # Source-quality claims (Sec. 6-B)
     pb = [r for r in rows if r["source_code"] == "PB"]
     pb_focal = [r["incident"] for r in pb if r["subset"] == "FOCAL"]
-    check("Five practitioner-blog anchors in the focal set", set(pb_focal) == ANCHORS_PB_FOCAL, ", ".join(pb_focal))
-    check("Sixth PB row is CVE-2025-55241 (CVE-indexed)", [r["id"] for r in pb if r["subset"] != "FOCAL"] == ["I08"])
+    check("Six practitioner-blog anchors in the focal set", set(pb_focal) == ANCHORS_PB_FOCAL, ", ".join(pb_focal))
+    check("Seventh PB row is CVE-2025-55241 (CVE-indexed)", [r["id"] for r in pb if r["subset"] != "FOCAL"] == ["I08"])
     six_src = Counter(next(r for r in rows if r["id"] == i)["source_code"] for i in exact)
     check("Six-of-seven pattern attested across PB, VEN, and NVD sources",
           {"PB", "VEN", "NVD"} <= set(six_src), dict(six_src))

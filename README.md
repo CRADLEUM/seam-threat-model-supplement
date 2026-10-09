@@ -1,8 +1,8 @@
 # Supplement: A Bidirectional Threat Model for AI-Agent Integration Across Federated Identity Boundaries
 
-Jerad Dunne and Suleyman Uludag, Department of Computer Science, University of Michigan-Flint.
+Jerad Dunne, Department of Computer Science, University of Michigan-Flint.
 
-Companion material for the short paper accepted at IEEE IPCCC 2026 (Austin, TX, November 2026). It holds everything the six-page limit could not: the full 21-incident corpus with per-incident coding, the codebook, the search and screening protocol, the 31-row STRIDE/LINDDUN elicitation matrix, the control specifications, the EchoLeak trace, and a script that reproduces the paper's corpus counts from the data file.
+Companion material for the short paper by J. Dunne and S. Uludag accepted at IEEE IPCCC 2026 (Austin, TX, November 2026). It holds everything the six-page limit could not: the full 21-incident corpus with per-incident coding, the codebook, the search and screening protocol, the 31-row STRIDE/LINDDUN elicitation matrix, the control specifications, the EchoLeak trace, and a script that reproduces the paper's corpus counts from the data file.
 
 **Status: pre-release.** Items marked provisional in the table below are awaiting author confirmation. Do not cite a DOI until the first release is tagged.
 
@@ -38,12 +38,12 @@ To re-code the corpus independently: apply the codebook to each row's cited sour
 
 | Item | Status |
 |---|---|
-| Incident list, years, modes, primary boundaries, source codes | As published in the paper's Table I |
+| Incident list, years, modes, primary boundaries, source codes | As published in the paper's Table I (camera-ready: Slack AI recoded PR to PB; "Notion AI 3.0" is now "Notion AI") |
 | Archetypes for the 12 incidents the paper names under A1/A2/A3 | As published |
 | Archetypes for the other 9 incidents | Provisional; two conflict with the paper's attachment statement (see validation report) |
 | Broad-ingestion flag for the 6 MCP-cluster rows | TBD |
 | Search protocol, excluded candidates | Recorded from the authors' assembly records |
-| Full 31-row matrix | From the authors' working matrix (row T-10 added 2026-07-19) |
+| Full 31-row matrix | From the authors' working matrix. The reviewed manuscript said 30 rows; T-10 (mcp-server-git at TB-4) was added on 2026-07-19 to match the corpus coding of that incident, and the paper's Table II IDs were renumbered to the 31-row numbering |
 
 ## Citing
 

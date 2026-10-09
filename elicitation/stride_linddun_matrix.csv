@@ -16,17 +16,17 @@ T-14,TB-5 (LLM <-> tool call),I,Drift+Exf,AC-3(16); SC-7(30),ChatGPT Custom GPT 
 T-15,TB-5 (LLM <-> tool call),I,Drift+Exf,AC-6(11); IA-13(4),OpenAI Codex token theft,,author's 31-row matrix (approved 2026-07-19); not in the paper
 T-16,TB-6 (memory -> LLM),T,WB-S,AC-16(11); SI-7(18),Gemini memory,,published in paper Table II
 T-17,TB-6 (corpus -> LLM),T,WB-S,SI-7(18); AC-16(11),Gemini memory,"analogue: structural-argument row, no direct corpus incident",author's 31-row matrix (approved 2026-07-19); not in the paper
-T-18,TB-7 (LLM -> SoR),T,Drift+WB-S+Exf,AC-4(33); AC-16(11); AC-6(11),Notion AI 3.0,,published in paper Table II
-T-19,TB-7 (LLM -> SoR),R,WB-S,AC-16(11),"Notion AI 3.0, Gemini memory",,author's 31-row matrix (approved 2026-07-19); not in the paper
+T-18,TB-7 (LLM -> SoR),T,Drift+WB-S+Exf,AC-4(33); AC-16(11); AC-6(11),Notion AI,,published in paper Table II
+T-19,TB-7 (LLM -> SoR),R,WB-S,AC-16(11),"Notion AI, Gemini memory",,author's 31-row matrix (approved 2026-07-19); not in the paper
 T-20,TB-8 (IdP -> tenant),S,Drift,IA-13(4),Storm-0558,,author's 31-row matrix (approved 2026-07-19); not in the paper
 T-21,TB-8 (IdP -> tenant),E,Drift,IA-13(4),Entra Actor,,author's 31-row matrix (approved 2026-07-19); not in the paper
 T-22,MCP server (process),T,SC,SI-7(18); parent SR-*,"Q Developer, AgentCore Toolkit",,published in paper Table II
 T-23,MCP server (process),S,SC,SI-7(18),Q Developer,,author's 31-row matrix (approved 2026-07-19); not in the paper
 T-24,LLM (process),I,Exf,AC-4(33); SI-10(7),Slack AI,,author's 31-row matrix (approved 2026-07-19); not in the paper
 T-25,Retrieval corpus (store),T,WB-S,SI-7(18); AC-16(11),Gemini memory,"analogue: structural-argument row, no direct corpus incident",author's 31-row matrix (approved 2026-07-19); not in the paper
-T-26,System of record (store),T,WB-S,AC-4(33); AC-16(11),Notion AI 3.0,,author's 31-row matrix (approved 2026-07-19); not in the paper
+T-26,System of record (store),T,WB-S,AC-4(33); AC-16(11),Notion AI,,author's 31-row matrix (approved 2026-07-19); not in the paper
 T-27,IdP / token store (store),I,Drift,IA-13(4),"CircleCI, Okta, GitHub-Heroku-Travis",,author's 31-row matrix (approved 2026-07-19); not in the paper
-T-28,TB-4 (cross-platform identity),L-Link.,Drift,AC-16(11); AC-4(33),"ASCII Smuggling, AgentFlayer, Notion AI 3.0, EchoLeak",,published in paper Table II
-T-29,TB-5 (agent vs. user principal),L-Ident.,Drift,AC-6(11); AC-16(11),"AgentFlayer, Notion AI 3.0",,author's 31-row matrix (approved 2026-07-19); not in the paper
+T-28,TB-4 (cross-platform identity),L-Link.,Drift,AC-16(11); AC-4(33),"ASCII Smuggling, AgentFlayer, Notion AI, EchoLeak",,published in paper Table II
+T-29,TB-5 (agent vs. user principal),L-Ident.,Drift,AC-6(11); AC-16(11),"AgentFlayer, Notion AI",,author's 31-row matrix (approved 2026-07-19); not in the paper
 T-30,TB-7 (rendered output),L-Disc.,Exf,AC-4(33); SI-10(7),"Slack AI, EchoLeak, ASCII Smuggling",,author's 31-row matrix (approved 2026-07-19); not in the paper
-T-31,TB-3 / TB-7 (audit-trail absence),L-Det.,"WB-S, Exf",AC-16(11); SC-7(30); SI-7(18),"Notion AI 3.0, Gemini memory",,author's 31-row matrix (approved 2026-07-19); not in the paper
+T-31,TB-3 / TB-7 (audit-trail absence),L-Det.,"WB-S, Exf",AC-16(11); SC-7(30); SI-7(18),"Notion AI, Gemini memory",,author's 31-row matrix (approved 2026-07-19); not in the paper

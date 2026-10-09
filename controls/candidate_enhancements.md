@@ -9,7 +9,7 @@ Blocks follow the temporal layering of the corpus: Block I (drift-universal) is 
 | AC-3(16) Cross-Domain Composition | I | Drift | Cross-PEP record of composed privilege, reconciled against the authorizing official's baseline | Salesloft Drift, CircleCI, Okta, GitHub-Heroku-Travis |
 | AC-6(11) Agent-Level Least Privilege | I | Drift | Per-task capability tokens; expire on completion; the agent audited as its own subject | AgentFlayer |
 | IA-13(4) IdP/Integrator Resilience | I | Drift | Anomalous-issuance monitoring; tenant-of-origin validation | Storm-0558, Entra Actor token, Salesloft Drift |
-| AC-4(33) AI-Mediated Information Flow | II | WB-S, Exf | Signed provenance on every LLM-mediated flow; reject if unverified | Notion AI 3.0 (WB-S), EchoLeak (Exf) |
+| AC-4(33) AI-Mediated Information Flow | II | WB-S, Exf | Signed provenance on every LLM-mediated flow; reject if unverified | Notion AI (WB-S), EchoLeak (Exf) |
 | AC-16(11) AI Content Provenance Attributes | II | WB-S | Runtime-bound signed provenance manifest (PROV-DM) verified at flow points | Gemini memory |
 | SI-7(18) Corpus and Memory Integrity | II | WB-S, SC | Provenance validation on retrieval; anomalous-write detection; rollback | AgentPoison (literature), Gemini memory |
 | SI-10(7) AI System Input Validation | II | Exf | Channel separation; pattern filtering; capability-based effect limits | AgentFlayer, EchoLeak |
@@ -24,7 +24,7 @@ Any cross-domain agent write or release must (1) establish what authority it rid
 | Subset | Gap | What the gap leaves open |
 |---|---|---|
 | AC-6(11) + AC-16(11), no SC-7(30) | Two verifiable bindings that nothing at the seam is obligated to parse | Step (iv): the outbound fetch still leaves |
-| AC-6(11) + SC-7(30), no AC-16(11) | The PEP confirms an authorized agent but has no lineage by which to recognize external content in the flow | The check at step (iv) is lost; where the write itself is authorized, as in Notion AI 3.0, attacker-influenced content enters the system of record as genuine |
+| AC-6(11) + SC-7(30), no AC-16(11) | The PEP confirms an authorized agent but has no lineage by which to recognize external content in the flow | The check at step (iv) is lost; where the write itself is authorized, as in Notion AI, attacker-influenced content enters the system of record as genuine |
 | AC-16(11) + SC-7(30), no AC-6(11) | Lineage is checked but the authority the content rides was never bound to a task | Step (iii): composed privilege stands |
 
 **Assumptions.** The agent runtime can mint task-scoped credentials; ingestion points can attach signed lineage that survives retrieval; every cross-domain flow traverses a PEP. The argument is a decomposition argument under these assumptions, not a formal proof. The claim is joint necessity within the decomposition, not sufficiency for secure composition.

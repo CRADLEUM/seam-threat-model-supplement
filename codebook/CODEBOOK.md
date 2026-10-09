@@ -24,7 +24,7 @@ One code per incident, recording the **primary** source on which the coding rest
 
 | Code | Meaning | Rule when several sources exist |
 |---|---|---|
-| PR | Peer-reviewed publication | Use only if the peer-reviewed source is the primary disclosure or independently reproduces the finding. A secondary review article that merely summarizes a practitioner disclosure does not earn PR (see the open item on Slack AI in `corpus/corpus.csv`). |
+| PR | Peer-reviewed publication | Use only if the peer-reviewed source is the primary disclosure or independently reproduces the finding. A secondary review article that merely summarizes a practitioner disclosure does not earn PR (Slack AI was recoded PR to PB on 2026-10-09 for this reason; no corpus row now carries PR). |
 | STD | Standards body or government report | For example, a CSRB report. |
 | NVD | NVD/CVE record | Use when the CVE record is the primary citable artifact, even if a vendor or researcher write-up is also cited. |
 | VEN | Vendor advisory, incident report, or vendor-presented research | Includes vendor-published conference research (for example, a Black Hat talk by a vendor's researchers). |

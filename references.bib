@@ -150,7 +150,8 @@
   title        = {{PROV-DM: The PROV Data Model}},
   howpublished = {W3C Recommendation},
   month        = apr,
-  year         = {2013}
+  year         = {2013},
+  url          = {https://www.w3.org/TR/2013/REC-prov-dm-20130430/}
 }
 
 @misc{c2pa2024,
@@ -193,13 +194,29 @@
   doi     = {10.1007/s00766-010-0115-7}
 }
 
+% 2026-10-09 (co-author review PF-12): cite the updated catalog. IA-13 entered
+% with Release 5.1.1 (Nov. 2023); Release 5.2.0 (Aug. 27, 2025) is current.
+% The DOI resolves to the updated document.
 @techreport{nist80053r5,
   author      = {{Joint Task Force}},
   title       = {{Security and Privacy Controls for Information Systems and Organizations}},
   institution = {National Institute of Standards and Technology},
   type        = {NIST SP},
-  number      = {800-53, Rev.~5},
-  year        = {2020}
+  number      = {800-53, Rev.~5, Release 5.2.0},
+  month       = aug,
+  year        = {2025},
+  doi         = {10.6028/NIST.SP.800-53r5}
+}
+
+% Added 2026-10-09 (co-author review PF-11): backs the abstract's "formal
+% OAuth analysis" clause (Sec. 2-B). Verified: ACM CCS 2016, pp. 1204-1215.
+@inproceedings{fett2016,
+  author    = {Fett, Daniel and K{\"u}sters, Ralf and Schmitz, Guido},
+  title     = {{A Comprehensive Formal Security Analysis of OAuth 2.0}},
+  booktitle = {Proc. 2016 ACM SIGSAC Conf. on Computer and Communications Security (CCS '16)},
+  pages     = {1204--1215},
+  year      = {2016},
+  doi       = {10.1145/2976749.2978385}
 }
 
 % NOTE: 7 authors verified against MDPI canonical citation block (all four
@@ -242,81 +259,105 @@
 % Practitioner / vendor disclosures
 % ========================================================================
 
+% 2026-10-09 (PF-29): the Black Hat USA 2025 briefing; "AgentFlayer" is
+% Zenity Labs' name for the exploit set, used in its post of the same title
+% (Aug. 6, 2025) and the deep dives it links.
 @misc{bargury2025,
   author       = {Bargury, Michael and Ishay Sharbat, Tamir},
   title        = {{AI Enterprise Compromise -- 0click Exploit Methods}},
-  howpublished = {Black Hat USA 2025},
-  year         = {2025}
+  howpublished = {Black Hat USA 2025; Zenity Labs (AgentFlayer)},
+  year         = {2025},
+  url          = {https://labs.zenity.io/p/hsc25}
 }
 
+% 2026-10-09 (PF-01/02): post published Jan. 9, 2026 (updated Aug. 2026). It
+% describes an image reference inserted into a page before user approval; it
+% does not mention JavaScript or "3.0".
 @misc{promptarmor2025notion,
   author       = {{PromptArmor}},
   title        = {{Notion AI: Data Exfiltration}},
   howpublished = {PromptArmor},
-  year         = {2026}
+  month        = jan,
+  year         = {2026},
+  url          = {https://www.promptarmor.com/resources/notion-ai-unpatched-data-exfiltration}
 }
 
 @misc{rehberger2025gemini,
   author       = {Rehberger, Johann},
   title        = {{Hacking Gemini's Memory with Prompt Injection and Delayed Tool Invocation}},
   howpublished = {Embrace The Red},
-  year         = {2025}
+  month        = feb,
+  year         = {2025},
+  url          = {https://embracethered.com/blog/posts/2025/gemini-memory-persistence-prompt-injection/}
 }
 
+% 2026-10-09 (PF-07): entry now cites the Aug. 26, 2024 post that documents
+% the M365 Copilot chain (injection via email or shared document, automatic
+% tool invocation, ASCII-smuggled hyperlink exfiltration). The Jan. 14, 2024
+% tool post ("ASCII Smuggler Tool...") described the technique only.
 @misc{rehberger2024ascii,
   author       = {Rehberger, Johann},
-  title        = {{ASCII Smuggler Tool: Crafting Invisible Text and Decoding Hidden Codes}},
+  title        = {{Microsoft Copilot: From Prompt Injection to Exfiltration of Personal Information}},
   howpublished = {Embrace The Red},
-  year         = {2024}
+  month        = aug,
+  year         = {2024},
+  url          = {https://embracethered.com/blog/posts/2024/m365-copilot-prompt-injection-tool-invocation-and-data-exfil-using-ascii-smuggling/}
 }
 
 @misc{securityweek2025krut,
   author       = {{SecurityWeek}},
   title        = {{ChatGPT Vulnerability Exposed Underlying Cloud Infrastructure}},
   howpublished = {SecurityWeek},
-  year         = {2025}
+  year         = {2025},
+  url          = {https://www.securityweek.com/chatgpt-vulnerability-exposed-underlying-cloud-infrastructure/}
 }
 
 @misc{mollema2025,
   author       = {Mollema, Dirk-jan},
   title        = {{One Token to rule them all -- obtaining Global Admin in every Entra ID tenant via Actor tokens}},
   howpublished = {Outsider Security},
-  year         = {2025}
+  year         = {2025},
+  url          = {https://dirkjanm.io/obtaining-global-admin-in-every-entra-id-tenant-with-actor-tokens/}
 }
 
 @misc{mandiant2025,
-  author       = {{Mandiant}},
+  author       = {{Google Threat Intelligence Group}},
   title        = {{Widespread Data Theft Targets Salesforce Instances via Salesloft Drift}},
   howpublished = {Google Cloud Blog},
-  year         = {2025}
+  year         = {2025},
+  url          = {https://cloud.google.com/blog/topics/threat-intelligence/data-theft-salesforce-instances-via-salesloft-drift}
 }
 
 @misc{circleci2023,
   author       = {{CircleCI}},
   title        = {{January 4, 2023 Security Incident Report}},
   howpublished = {CircleCI},
-  year         = {2023}
+  year         = {2023},
+  url          = {https://circleci.com/blog/jan-4-2023-incident-report/}
 }
 
 @misc{okta2023,
   author       = {{Okta Security}},
   title        = {{Unauthorized Access to Okta's Support Case Management System: Root Cause and Remediation}},
   howpublished = {Okta Security},
-  year         = {2023}
+  year         = {2023},
+  url          = {https://sec.okta.com/articles/2023/11/unauthorized-access-oktas-support-case-management-system-root-cause/}
 }
 
 @misc{github2022,
   author       = {{GitHub}},
   title        = {{Security alert: Attack campaign involving stolen OAuth user tokens issued to two third-party integrators}},
   howpublished = {GitHub Blog},
-  year         = {2022}
+  year         = {2022},
+  url          = {https://github.blog/news-insights/company-news/security-alert-stolen-oauth-user-tokens/}
 }
 
 @techreport{csrb2024,
   author      = {{Cyber Safety Review Board}},
   title       = {{Review of the Summer 2023 Microsoft Exchange Online Intrusion}},
   institution = {U.S. Dept. of Homeland Security},
-  year        = {2024}
+  year        = {2024},
+  url         = {https://www.cisa.gov/resources-tools/resources/CSRB-Review-Summer-2023-MEO-Intrusion}
 }
 
 % ========================================================================
@@ -327,9 +368,13 @@
   author       = {Ravia, Itay},
   title        = {{Breaking down ``EchoLeak'', the First Zero-Click AI Vulnerability Enabling Data Exfiltration from Microsoft 365 Copilot}},
   howpublished = {Aim Labs / Cato AI Labs},
-  year         = {2025}
+  month        = jun,
+  year         = {2025},
+  url          = {https://www.catonetworks.com/blog/breaking-down-echoleak/}
 }
 
+% 2026-10-09 (PF-04): NVD carries only GitHub's CVSS v4.0 9.4 for this CVE;
+% there is no v3.1 score. Sec. 3-B tags it "CVSS v4.0".
 @misc{cve2025-49596,
   author       = {{Oligo Security}},
   title        = {{Critical RCE in Anthropic MCP Inspector (CVE-2025-49596)}},
@@ -344,6 +389,9 @@
   year         = {2025}
 }
 
+% 2026-10-09 (PF-03): NVD v3.1 scores re-verified: 68143 = 8.8, 68144 = 7.1,
+% 68145 = 9.1 (68143 and 68145 last modified 2026-09-30; NVD rescored after
+% the 2026-08-21 check that read 8.8/8.1/7.1).
 @misc{cve2025-68143,
   author       = {{MITRE}},
   title        = {{CVE-2025-68143/4/5: mcp-server-git Argument Injection and Path Bypass}},
@@ -383,7 +431,8 @@
   author       = {Davis, Fletcher and Jespersen, Tyler},
   title        = {{OpenAI Codex Command Injection Vulnerability via GitHub Branch Names}},
   howpublished = {BeyondTrust Phantom Labs},
-  year         = {2026}
+  year         = {2026},
+  url          = {https://www.beyondtrust.com/blog/entry/openai-codex-command-injection-vulnerability-github-token}
 }
 
 % ---- Added 2026-08-09 for IPCCC revision (Reviewer C fix + ported journal-build refs) ----
@@ -412,9 +461,10 @@
 @misc{owasp2026top10,
   author       = {{OWASP GenAI Security Project}},
   title        = {{OWASP Top 10 for Agentic Applications for 2026}},
-  howpublished = {OWASP Foundation, genai.owasp.org},
+  howpublished = {OWASP Foundation},
   year         = {2025},
-  note         = {{D}ec.\ 9}
+  note         = {{D}ec.\ 9},
+  url          = {https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/}
 }
 
 @misc{huang2025maestro,
@@ -422,7 +472,8 @@
   title        = {{Agentic AI Threat Modeling Framework: MAESTRO}},
   howpublished = {Cloud Security Alliance blog},
   year         = {2025},
-  note         = {{F}eb.\ 6}
+  note         = {{F}eb.\ 6},
+  url          = {https://cloudsecurityalliance.org/blog/2025/02/06/agentic-ai-threat-modeling-framework-maestro}
 }
 
 % AUTHOR-VERIFY: exact title and month of the Aim Labs disclosure post before
@@ -447,7 +498,8 @@
   title        = {{Data Exfiltration from Slack AI via Indirect Prompt Injection}},
   howpublished = {PromptArmor},
   year         = {2024},
-  note         = {{A}ug.\ 14}
+  note         = {{A}ug.\ 14},
+  url          = {https://www.promptarmor.com/resources/data-exfiltration-from-slack-ai-via-indirect-prompt-injection}
 }
 
 
@@ -469,9 +521,11 @@
   year        = {2024}
 }
 
+% 2026-10-09 (PF-24): supplement listed under the first author only, at the
+% co-author's request (he is not reviewing the repository).
 @misc{dunne2026supplement,
-  author       = {Jerad Dunne and Suleyman Uludag},
-  title        = {Supplement to ``A Bidirectional Threat Model for {AI}-Agent Integration Across Federated Identity Boundaries'': corpus, codebook, and elicitation matrix},
+  author       = {Jerad Dunne},
+  title        = {{Supplement to ``A Bidirectional Threat Model for AI-Agent Integration Across Federated Identity Boundaries'': corpus, codebook, and elicitation matrix}},
   year         = {2026},
   howpublished = {Zenodo},
   note         = {\url{https://doi.org/10.5281/zenodo.XXXXXXX}},
