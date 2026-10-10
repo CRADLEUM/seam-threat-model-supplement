@@ -5,8 +5,8 @@ authors:
   - family-names: Dunne
     given-names: Jerad
     affiliation: University of Michigan-Flint
-version: 0.9.0-pre
-date-released: 2026-10-08
+version: 1.0.0
+date-released: 2026-10-10
 license: CC-BY-4.0
 repository-code: https://github.com/jeraddunne/seam-threat-model-supplement
 preferred-citation:
