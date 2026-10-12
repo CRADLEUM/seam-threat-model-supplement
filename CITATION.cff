@@ -8,6 +8,13 @@ authors:
 version: 1.0.0
 date-released: 2026-10-12
 license: CC-BY-4.0
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23320544
+    description: Concept DOI (all versions)
+  - type: doi
+    value: 10.5281/zenodo.23320545
+    description: Version DOI (v1.0.0)
 repository-code: https://github.com/jeraddunne/seam-threat-model-supplement
 preferred-citation:
   type: conference-paper

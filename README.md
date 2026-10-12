@@ -48,7 +48,7 @@ To re-code the corpus independently: apply the codebook to each row's cited sour
 
 ## Citing
 
-Paper (short version, IPCCC 2026): see `CITATION.cff`. This supplement: J. Dunne, "Supplement to 'A Bidirectional Threat Model for AI-Agent Integration Across Federated Identity Boundaries': corpus, codebook, and elicitation matrix," Zenodo, 2026, doi:10.5281/zenodo.XXXXXXX (concept DOI; resolves to the latest version). Repository: https://github.com/jeraddunne/seam-threat-model-supplement
+Paper (short version, IPCCC 2026): see `CITATION.cff`. This supplement: J. Dunne, "Supplement to 'A Bidirectional Threat Model for AI-Agent Integration Across Federated Identity Boundaries': corpus, codebook, and elicitation matrix," Zenodo, 2026, doi:10.5281/zenodo.23320544 (concept DOI; resolves to the latest version). Repository: https://github.com/jeraddunne/seam-threat-model-supplement
 
 ## License
 
