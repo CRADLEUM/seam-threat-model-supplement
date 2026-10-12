@@ -1,0 +1,9 @@
+cve,incident,corpus_id,basis,cvss_version,score,severity,source,marked_c_in_paper,nvd_last_modified,note
+CVE-2025-49596,MCP Inspector,I01,CNA,4.0,9.4,Critical,security-advisories@github.com (GitHub),yes,2026-06-17,NVD holds no score for this record (status Deferred); the only published score is the GitHub CNA v4.0 score
+CVE-2025-54136,Cursor,I02,NVD,3.1,8.8,High,nvd@nist.gov,no,2026-06-17,GitHub CNA v3.1 score is 7.2; the paper uses the NVD score
+CVE-2025-68143,mcp-server-git,I03,NVD,3.1,8.8,High,nvd@nist.gov,no,2026-09-30,NVD v3.1 score set 2026-04-14 and unchanged since; the 2026-09-30 change is a translation entry
+CVE-2025-68144,mcp-server-git,I03,NVD,3.1,7.1,High,nvd@nist.gov,no,2026-06-17,NVD v3.1 score set 2026-04-14 and unchanged since; the 8-page submission printed 8.1 in error
+CVE-2025-68145,mcp-server-git,I03,NVD,3.1,9.1,Critical,nvd@nist.gov,no,2026-09-30,NVD v3.1 score set 2026-04-14 and unchanged since; the 8-page submission printed 7.1 in error; the 2026-09-30 change is a translation entry
+CVE-2025-6514,mcp-remote,I04,CNA,3.1,9.6,Critical,reefs@jfrog.com (JFrog),yes,2026-06-17,NVD holds no score for this record (status Deferred)
+CVE-2025-8217,Amazon Q Developer VS Code extension,I05,CNA,3.1,4.0,Medium,ff89ba41-3aa1-4d27-914a-91399e9639e5 (Amazon),yes,2026-06-17,Amazon also publishes a v4.0 score of 5.1 (Medium); NVD holds no score (status Deferred); the cluster's one Medium
+CVE-2026-4269,Bedrock AgentCore Starter Toolkit,I06,CNA,3.1,7.5,High,ff89ba41-3aa1-4d27-914a-91399e9639e5 (Amazon),yes,2026-06-17,Amazon also publishes a v4.0 score of 5.8 (Medium); NVD holds no score

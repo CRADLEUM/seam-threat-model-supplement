@@ -26,7 +26,7 @@ Rendered in the paper as Fig. 1 (TikZ source: `dfd_figure.tex` in the paper's La
 | MCP client to MCP server | bidirectional | TB-3 | Results return as new model input; a server can act on the client |
 | MCP server to External system | one-way | TB-4 | Server exercises federated credentials against another domain |
 | MCP client to LLM | bidirectional | TB-5 | Model output becomes tool dispatch under the delegated identity |
-| Agent memory and Retrieval corpus to LLM | one-way | TB-6 | Stored content enters context as if trusted |
+| Agent memory and Retrieval corpus with LLM | memory: two-way (read and write); corpus: one-way retrieval | TB-6 | Stored content enters context as if trusted; model output written to memory is read back later as trusted (Gemini memory) |
 | LLM to System of record | one-way | TB-7 | Model output persists into an authoritative store |
 | IdP to MCP server; IdP to External system | one-way | TB-8 (IdP to external system) | Token trust across the federation; the IdP-to-server arc is inside the host's domain and carries no separate boundary |
 

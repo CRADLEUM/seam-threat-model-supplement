@@ -4,7 +4,7 @@ Jerad Dunne, Department of Computer Science, University of Michigan-Flint.
 
 Companion material for the short paper by J. Dunne and S. Uludag accepted at IEEE IPCCC 2026 (Austin, TX, November 2026). It holds everything the six-page limit could not: the full 21-incident corpus with per-incident coding, the codebook, the search and screening protocol, the 31-row STRIDE/LINDDUN elicitation matrix, the control specifications, the EchoLeak trace, and a script that reproduces the paper's corpus counts from the data file.
 
-**Status: v1.0.0 (2026-10-10), the version the camera-ready paper cites.** Items marked provisional in the table below remain open and are stated as such; they do not change the corpus counts the paper reports. Settling them will produce a new version under the same concept DOI.
+**Status: v1.0.0 (released 2026-10-12), the version the camera-ready paper cites.** Items marked provisional in the table below remain open and are stated as such; they do not change the corpus counts the paper reports. Settling them will produce a new version under the same concept DOI.
 
 ## How to read this repository
 
@@ -42,6 +42,7 @@ To re-code the corpus independently: apply the codebook to each row's cited sour
 | Archetypes for the 12 incidents the paper names under A1/A2/A3 | As published |
 | Archetypes for the other 9 incidents | Provisional; two conflict with the paper's attachment statement (see validation report) |
 | Broad-ingestion flag for the 6 MCP-cluster rows | TBD |
+| CVSS scores for the 8 MCP-cluster CVE records | `corpus/cvss_snapshot.csv`: CVSS v3.1 as recorded on 21 Aug. 2026, NVD score where NVD has one, otherwise the CNA score (marked C); MCP Inspector has only a v4.0 score. Re-checked 2026-10-12 against the NVD API and change history: no score has changed since. The paper's mcp-server-git figures are 8.8/7.1/9.1 (CVE-2025-68143/68144/68145); the 8-page submission's 8.8/8.1/7.1 was a transcription error |
 | Search protocol, excluded candidates | Recorded from the authors' assembly records |
 | Full 31-row matrix | From the authors' working matrix. The reviewed manuscript said 30 rows; T-10 (mcp-server-git at TB-4) was added on 2026-07-19 to match the corpus coding of that incident, and the paper's Table II IDs were renumbered to the 31-row numbering |
 

@@ -6,9 +6,9 @@ The paper commits to two claims that evidence could overturn. This file states e
 
 **Claim.** Within the corpus, multi-mode incidents pair privilege drift with delegated-agent exfiltration (six of seven), and strict write-back appears in two incidents only.
 
-**Condition that refutes it.** A publicly disclosed vulnerability in an MCP-canonical implementation (reference servers, major clients, the Inspector, mcp-remote and peers) that instantiates strict write-back injection (attacker-influenced output persisted into a store later read back as trusted input) **without** co-occurring drift or exfiltration. One such case reduces the pattern to a corpus artifact; several reverse it.
+**Condition that refutes it.** A publicly disclosed vulnerability in an MCP-canonical implementation (reference servers, major clients, the Inspector, mcp-remote and peers) that instantiates strict write-back injection (attacker-influenced output persisted into a store later read back as trusted input) **without** co-occurring drift or exfiltration. One such case would show that the corpus had not yet recorded MCP-side persistence; a growing record of them would overturn the pattern.
 
-**What does not refute it.** Write-back in adjacent ecosystems (the two existing anchors already sit there); transient rendering of attacker content (broad ingestion, which the paper already reports as near-universal); write-back that co-occurs with drift or exfiltration (which the pattern already accommodates, as Notion AI 3.0 shows).
+**What does not refute it.** Write-back in adjacent ecosystems (the two existing anchors already sit there); transient rendering of attacker content (broad ingestion, which the paper reports as near-universal: seven of the eight agent-mediated incidents, all but the Custom GPT SSRF); write-back that co-occurs with drift or exfiltration (which the pattern already accommodates, as Notion AI shows).
 
 **Where to look.** NVD records tagged to MCP components; vendor advisories from Anthropic, Cursor, and IDE vendors; practitioner disclosures that document a persistence step with a later trusted read.
 

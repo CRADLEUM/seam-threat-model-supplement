@@ -2,7 +2,7 @@
 
 None of these is in the published NIST SP 800-53 Rev 5 catalog. They are proposed for standards-track review as sequentially numbered candidates under existing controls. Numbering is provisional and would be assigned by NIST if adopted.
 
-Blocks follow the temporal layering of the corpus: Block I (drift-universal) is justified by the seven pre-agentic antecedents alone; Block II (AI-agent-bounded) by the fourteen agent-mediated incidents; Block III (bridging) applies regardless of carrier.
+Blocks follow the temporal layering of the corpus: Block I (drift-universal) addresses drift, which the seven pre-agentic antecedents show needs no agent carrier; AC-3(16) and IA-13(4) rest on those antecedents alone, and AC-6(11) is the block's agent-level instance, anchored in AgentFlayer. Block II (AI-agent-bounded) addresses the two modes that do need an agent carrier, on the fourteen agent-mediated incidents. Block III (bridging) applies regardless of carrier.
 
 | Candidate | Block | Mode(s) | Mechanism | Corpus evidence anchor |
 |---|---|---|---|---|
