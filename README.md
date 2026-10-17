@@ -4,7 +4,7 @@ Jerad Dunne, Department of Computer Science, University of Michigan-Flint.
 
 Companion material for the short paper by J. Dunne and S. Uludag accepted at IEEE IPCCC 2026 (Austin, TX, November 2026). It holds everything the six-page limit could not: the full 21-incident corpus with per-incident coding, the codebook, the search and screening protocol, the 31-row STRIDE/LINDDUN elicitation matrix, the control specifications, the EchoLeak trace, and a script that reproduces the paper's corpus counts from the data file.
 
-**Status: v1.0.0 (released 2026-10-12), the version the camera-ready paper cites.** Items marked provisional in the table below remain open and are stated as such; they do not change the corpus counts the paper reports. Settling them will produce a new version under the same concept DOI.
+**Status: v1.0.0 (released 2026-10-12), the version the camera-ready paper cites.** Items marked provisional in the table below remain open and are stated as such; they do not change the corpus counts the paper reports. Settling them will produce a new tagged version.
 
 ## How to read this repository
 
@@ -48,7 +48,7 @@ To re-code the corpus independently: apply the codebook to each row's cited sour
 
 ## Citing
 
-Paper (short version, IPCCC 2026): see `CITATION.cff`. This supplement: J. Dunne, "Supplement to 'A Bidirectional Threat Model for AI-Agent Integration Across Federated Identity Boundaries': corpus, codebook, and elicitation matrix," Zenodo, 2026, doi:10.5281/zenodo.23320544 (concept DOI; resolves to the latest version). Repository: https://github.com/jeraddunne/seam-threat-model-supplement
+Paper (short version, IPCCC 2026): see `CITATION.cff`. This supplement: J. Dunne, "Supplement to 'A Bidirectional Threat Model for AI-Agent Integration Across Federated Identity Boundaries': corpus, codebook, and elicitation matrix," GitHub repository, 2026. Available: https://github.com/CRADLEUM/seam-threat-model-supplement
 
 ## License
 
