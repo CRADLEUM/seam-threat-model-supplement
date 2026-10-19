@@ -4,7 +4,7 @@ Jerad Dunne, Department of Computer Science, University of Michigan-Flint.
 
 Companion material for the short paper by J. Dunne and S. Uludag accepted at IEEE IPCCC 2026 (Austin, TX, November 2026). It holds everything the six-page limit could not: the full 21-incident corpus with per-incident coding, the codebook, the search and screening protocol, the 31-row STRIDE/LINDDUN elicitation matrix, the control specifications, the EchoLeak trace, and a script that reproduces the paper's corpus counts from the data file.
 
-**Status: v1.0.0 (released 2026-10-12), the version the camera-ready paper cites.** Items marked provisional in the table below remain open and are stated as such; they do not change the corpus counts the paper reports. Settling them will produce a new tagged version.
+**Status: v1.0.1 (released 2026-10-19), the version the camera-ready paper cites. Same data, codebook, matrix, controls and scripts as v1.0.0 (2026-10-12); v1.0.1 changes only the citation metadata.** Items marked provisional in the table below remain open and are stated as such; they do not change the corpus counts the paper reports. Settling them will produce a new tagged version.
 
 ## How to read this repository
 
